@@ -1,10 +1,13 @@
+///referens types ='cypress' />
+
+/*
 it('by ID',()=>{
     cy.visit("https://facebook.com/")
-    cy.get('#email')
+    cy.get("#email")
 });
 it('by class',()=>{
-    cy.visit("https://docs.cypress.io/api/commands/get#Examples")
-    cy.get(".ds-input")
+    cy.visit("https://docs.cypress.io/api/commands/get.htm#Syntax")
+    cy.get('.ds-input')
 });
 it('by Tag',()=>{
     cy.visit("https://docs.cypress.io/api/commands/get#Examples")
@@ -14,7 +17,26 @@ it('by Tag Value',()=>{
     cy.visit("https://facebook.com/")
     cy.get('[name="pass"]');
 });   
-it.only('by Diffent Tag',()=>{
+it('by Diffrent Tag',()=>{
     cy.visit("https://facebook.com/")
     cy.get('[data-testid="open-registration-form-button"][role="button"]')
+});
+it('by Contains name',()=>{
+    cy.visit("https://next.privat24.ua/")
+    cy.get('*[class^="card"]')
+});
+*/
+
+
+it('Using get with find and eq',()=>{
+    cy.visit("https://next.privat24.ua/deposit/open")
+    cy.get("tbody").find('td').find('div').find('button').eq(0)
+    
+});
+
+it.only('Using get with find and eq',()=>{
+    cy.viewport(1800,700)
+    cy.visit("https://docs.cypress.io/api/commands/eq.html#System")
+    cy.get("aside").find('div').find('ul').find('li').find('a').eq(0)
+    
 });
