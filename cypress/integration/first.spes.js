@@ -26,7 +26,7 @@ it('by Contains name',()=>{
     cy.get('*[class^="card"]')
 });
 */
-
+// коментарий
 
 it('Using get with find and eq',()=>{
     cy.visit("https://next.privat24.ua/deposit/open")
