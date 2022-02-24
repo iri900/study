@@ -27,7 +27,7 @@ it('by Contains name',()=>{
 });
 */
 // коментарий
-
+// test findelement
 it('Using get with find and eq',()=>{
     cy.visit("https://next.privat24.ua/deposit/open")
     cy.get("tbody").find('td').find('div').find('button').eq(0)
